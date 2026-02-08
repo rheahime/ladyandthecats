@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady and the Cats | Indie Game Studio</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #6a4c93; /* Royal Purple */
+            --accent: #ff9e00;  /* Cat Eye Gold */
+            --bg: #fdf6e3;      /* Creamy Paper */
+            --text: #2d2d2d;
+            --white: #ffffff;
+            --story-bg: #fff0f5; /* Lavender Blush for stories */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary), #9d72cf);
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        p.tagline { font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem; }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 3rem; /* Spacing between sections */
+        }
+
+        /* Grid Layouts */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-content { padding: 1.5rem; flex-grow: 1; }
+        .card-content h3 { margin-top: 0; color: var(--primary); }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .badge-live { background-color: #d4edda; color: #155724; }
+        .badge-dev { background-color: #fff3cd; color: #856404; }
+        .badge-draft { background-color: #e2e3e5; color: #383d41; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .btn:hover { background-color: #533b75; }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-secondary:hover { background-color: var(--primary); color: white; }
+
+        /* Story Specifics */
+        .story-card {
+            border-left: 5px solid var(--accent);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: #e9ecef;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lady and the Cats</h1>
+        <p class="tagline">Cozy Games & Magical Stories</p>
+    </header>
+
+    <div class="container">
+        
+        <div style="text-align: center;">
+            <h2 class="section-title">Games & Apps</h2>
+        </div>
+
+        <div class="grid-layout">
+            <article class="card">
+                <div class="card-content">
+                    <span class="badge badge-live">Available for Testing</span>
+                    <h3>Cats!</h3>
+                    <p>A delightful collection of mini-games featuring cute kitties. Test your reflexes in the Endless Runner or train your brain with Memory Kitty!</p>
+                    <p><strong>Status:</strong> Open Beta (Android)</p>
+                    <a href="#" class="btn">Download on Google Play</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <span class="badge badge-dev">In Development</span>
+                    <h3>Magical Lady's Tarot</h3>
+                    <p>Take a peek at your destiny. A mystical fortune-telling app to guide your daily life using Tarot and Lenormand cards.</p>
+                    <p><strong>Coming:</strong> Late 2026</p>
+                </div>
+            </article>
+
+    <!--           <article class="card">
+                <div class="card-content">
+                    <span class="badge badge-dev">In Development</span>
+   <!--                  <h3>The Princes of Polus</h3>
+                    <p>An urban fantasy visual novel. Transmigrate into a new world, uncover secrets, and find romance in the city of Polus.</p>
+                    <p><strong>Platform:</strong> Android (Ren'Py)</p>
+                </div>
+            </article>  -->
+        </div>
+
+        <div style="text-align: center;">
+            <h2 class="section-title">Stories & Novels</h2>
+        </div>
+
+<div class="grid-layout">
+            <article class="card story-card">
+                <div class="card-content">
+                    <span class="badge badge-dev">Coming Soon</span>
+                    
+                    <h3>A Wish Mistake</h3>
+                    <p><em>"Be careful what you wish for..."</em></p>
+                    <p>An introverted writer receives a mysterious "love potion" from a witch, but things go awry when she accidentally gives it to the wrong person.</p>
+                    
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+                    
+                    <p style="font-size: 0.9rem; color: #666;">
+                        <strong>Launch Plan:</strong><br>
+                        Exclusive release on <strong>Amazon Kindle (KDP)</strong>.
+                    </p>
+                </div>
+            </article>
+            
+            <article class="card story-card" style="opacity: 0.6; background-color: #f9f9f9;">
+                <div class="card-content">
+                    <span class="badge badge-draft">Drafting</span>
+                    <h3>Next Novel...</h3>
+                    <p>More heartwarming stories are being written!</p>
+                </div>
+            </article>
+        </div>            
+            </div>
+
+        <div class="about-section">
+            <h2 style="color: var(--primary);">About the Creator</h2>
+            <p>
+                Hi! I'm <strong>Rhea</strong> (also known as <em>rheahime</em> on <a href="https://www.wattpad.com/user/rheahime" target="_blank">Wattpad</a>). 
+                I am an indie developer and writer based in the Philippines.
+            </p>
+            <p>
+                My studio, <strong>Lady and the Cats</strong>, is inspired by my tribe of 28 rescue cats and my dog, Sansa. 
+                Whether I'm coding a new game feature or drafting a new chapter, my goal is to create fun experiences and heartwarming stories that bring a little bit of magic to your day.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Lady and the Cats. All rights reserved.</p>
+        <p>
+            <a href="privacy.html" target="_blank">Privacy Policy</a> | 
+            <a href="terms.html" target="_blank">Terms of Service</a> |
+            <a href="mailto:ladyandthecats550@gmail.com">Contact Support</a>
+        </p>
+    </footer>
+
+</body>
+</html>
